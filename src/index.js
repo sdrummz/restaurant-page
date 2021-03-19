@@ -1,4 +1,8 @@
 
+import { displayNav } from "./nav";
+import { displayHome } from "./home";
+
+const content = document.querySelector('.content');
 
 function createNewElement(type, classes, text) {
     const element = document.createElement(type);
@@ -8,8 +12,13 @@ function createNewElement(type, classes, text) {
         }
     }
     if (text) {
-        element.innerHtml = text;
+        element.textContent = text;
     }
+
+    return element;
 }
 
-export { createNewElement }
+displayNav();
+displayHome();
+
+export { createNewElement, content }
