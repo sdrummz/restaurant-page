@@ -1,6 +1,7 @@
 
 import { displayNav } from "./nav";
 import { displayHome } from "./home";
+import { displayMenu } from "./menu";
 
 const content = document.querySelector('.content');
 
@@ -12,13 +13,22 @@ function createNewElement(type, classes, text) {
         }
     }
     if (text) {
-        element.textContent = text;
+        element.innerHTML = text;
     }
 
     return element;
 }
 
-displayNav();
-displayHome();
+const home = () => {
+    displayNav();
+    displayHome();
+}
+
+const menu = () => {
+    displayNav();
+    displayMenu();
+}
+
+menu()
 
 export { createNewElement, content }
