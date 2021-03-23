@@ -2,6 +2,7 @@
 import { displayNav } from "./nav";
 import { displayHome } from "./home";
 import { displayMenu } from "./menu";
+import { displayContact } from "./contact";
 
 const content = document.querySelector('.content');
 
@@ -29,6 +30,28 @@ const menu = () => {
     displayMenu();
 }
 
-menu()
+const contact = () => {
+    displayNav();
+    displayContact();
+}
+
+document.addEventListener('click', el => {
+    const btnClick = el.target.innerHTML;
+
+    if (btnClick === "Home") {
+        content.innerHTML = '';
+        home();
+    }
+    if (btnClick === "Menu") {
+        content.innerHTML = '';
+        menu();
+    }
+    if (btnClick === "Contact") {
+        content.innerHTML = '';
+        contact();
+    }
+})
+
+home();
 
 export { createNewElement, content }

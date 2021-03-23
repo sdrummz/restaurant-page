@@ -18,7 +18,7 @@ body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
-  color: white;
+  color: whitesmoke;
 }
 
 .navbar h1 {
@@ -32,7 +32,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   display: flex;
   list-style: none;
-  color: white;
+  color: whitesmoke;
   gap: 40px;
   justify-content: center;
 }
@@ -57,12 +57,14 @@ body {
   margin: auto;
   margin-top: 50px;
   border-radius: 10px;
-  color: white;
+  color: whitesmoke;
   justify-content: center;
   text-align: center;
   line-height: 1.5;
   padding: 20px;
   margin-bottom: 30px;
+  min-width: 700px;
+  max-width: 900px;
 }
 
 .main-container img {
@@ -81,7 +83,7 @@ body {
 }
 
 .item {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
   width: 300px;
   border-radius: 10px;
@@ -112,4 +114,76 @@ body {
 .main-content h1 {
   font-family: cursive;
   font-size: 40px;
+}
+
+/* Contact Us */
+
+.contact-form {
+  position: relative;
+  padding: 60px 40px 20px;
+}
+
+.contact-form form {
+  width: 100%;
+}
+
+.contact-form .row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form .input50 {
+  width: 50%;
+}
+
+.contact-form .input100 {
+  width: 100%;
+}
+
+.contact-form .row input,
+.contact-form .row textarea {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0;
+  resize: none;
+}
+
+.contact-form .row textarea {
+  height: 150px;
+}
+
+.contact-form .row input[type='submit'] {
+  background-color: rgba(191, 191, 191, 0.8);
+  color: #fff;
+  margin-left: 2%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  border: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .main-container {
+    min-width: 80%;
+  }
+
+  .items {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form .row {
+    flex-direction: column;
+  }
+
+  .contact-form .input50,
+  .contact-form .input100 {
+    width: 100%;
+    margin: 0;
+  }
 }
