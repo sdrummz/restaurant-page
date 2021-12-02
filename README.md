@@ -6,4 +6,4 @@ separating all pages into its own JS module and using import/export, and learnin
 # Live demo
 
 If you dare to look
-https://szglabs.github.io/restaurant-page/
+https://sdrummz.github.io/restaurant-page/
